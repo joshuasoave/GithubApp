@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './main.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
+    <Router basename="/GithubApp">
     <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -5,11 +5,11 @@ import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router basename="/GithubApp">
+
       <div className="App">
         <Header/>
         <main>
@@ -22,7 +22,7 @@ function App() {
         </main>
         <Footer/>
       </div>
-    </Router>
+
   );
 }
 
