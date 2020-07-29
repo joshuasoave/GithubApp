@@ -125,6 +125,31 @@ input[type=text] {
 }
 
 /*//////*/
+/* About*/
+/*//////*/
+.about {
+  width: 80%;
+  font-size: 16px;
+}
+
+.about h2 {
+  margin-bottom: 1em;
+}
+
+.about p {
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+.about a {
+  color: #0cd4bb;
+}
+
+.about img {
+  height: 300px;
+}
+
+/*//////*/
 /* Footer */
 /*//////*/
 footer {
@@ -150,6 +175,18 @@ footer span {
   #home-img {
     height: 400px;
     margin: 3em;
+  }
+
+  .about img {
+    height: 400px;
+  }
+
+  .about h2 {
+    margin-bottom: .5em;
+  }
+
+  .about {
+    font-size: 18px;
   }
 
 }
