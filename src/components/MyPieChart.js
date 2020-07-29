@@ -6,6 +6,7 @@ const MyPieChart = ({languages, userfullname}) => {
     const title = `${userfullname}'s preferred Languages`;
 
     return(
+
         <div>
 
             <Chart
@@ -15,7 +16,7 @@ const MyPieChart = ({languages, userfullname}) => {
                 loader={<div>Loading Chart</div>}
                 data={languages}
                 options={{
-                    title: title,
+                    title: title
                 }}
             />
 

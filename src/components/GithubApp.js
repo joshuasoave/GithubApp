@@ -113,7 +113,7 @@ const GithubApp = () => {
                                 <p>Following {following}</p>
                             }
                         </div>
-                        <MyPieChart languages={languages} userfullname={userfullname} />
+                        <MyPieChart languages={languages} userfullname={username} />
                     </div>
                 }
             </div>
