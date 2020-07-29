@@ -17,12 +17,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/app">
+            <Link to="./app">
               <SearchIcon fontSize="large"/>
             </Link>
           </li>
           <li>
-            <Link to='/about'>
+            <Link to='./about'>
             <InfoIcon fontSize="large"/>
             </Link>
           </li>
