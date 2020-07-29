@@ -1,0 +1,25 @@
+* {
+  border: 1px solid gold;
+  margin: 0;
+  padding: 0;
+}
+
+/* MOBILE STYLE */
+
+/*//////*/
+/* HEADER */
+/*//////*/
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/*//////*/
+/* MAIN */
+/*//////*/
+body {
+  background: #340a58;
+  color: 	#b4fb6d;
+}

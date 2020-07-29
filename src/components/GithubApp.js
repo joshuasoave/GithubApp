@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import './GithubApp.scss';
 import MyPieChart from './MyPieChart';
-import Button from '@material-ui/core/Button';
 import Avatar from './Avatar';
 
 const GithubApp = () => {
@@ -77,6 +75,7 @@ const GithubApp = () => {
 
     return (
         <div className="container">
+
             <h3>What language does User code in?</h3>
             <p>(based on user's contributions to public Github repositories)</p>
             <form onSubmit={fetchUser}>
