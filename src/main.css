@@ -99,6 +99,10 @@ footer a {
   color: #0cd4bb;
 }
 
+footer span {
+  margin-left: 2em;
+}
+
 /*////////////*/
 /* DESKTOP  */
 /*///////////*/
