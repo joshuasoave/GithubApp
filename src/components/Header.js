@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import HomeIcon from '@material-ui/icons/Home';
+import InfoIcon from '@material-ui/icons/Info';
+import SearchIcon from '@material-ui/icons/Search';
 
 const Header = () => {
 
@@ -10,17 +13,17 @@ const Header = () => {
         <ul>
           <li>
             <Link to="/">
-              <p>Home</p>
+              <HomeIcon fontSize="large"/>
             </Link>
           </li>
           <li>
             <Link to="/app">
-              <p>Babel</p>
+              <SearchIcon fontSize="large"/>
             </Link>
           </li>
           <li>
             <Link to='/about'>
-            <p>About</p>
+            <InfoIcon fontSize="large"/>
             </Link>
           </li>
         </ul>

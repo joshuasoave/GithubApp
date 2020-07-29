@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MyPieChart from './MyPieChart';
 import Avatar from './Avatar';
+import SearchIcon from '@material-ui/icons/Search';
 
 const GithubApp = () => {
     const [username, setUsername] = useState("");
@@ -76,16 +77,16 @@ const GithubApp = () => {
     return (
         <div className="container">
             <form onSubmit={fetchUser}>
-              <h3>What language does User code in?</h3>
-              <p>(based on user's contributions to public Github repositories)</p>
-              <input
-                type="text"
-                placeholder="Enter User's Github username"
-                value={username}
-                onChange={handleChange}
-              />
-              <br/>
-              <input type="submit" value="Search"/>
+              <h3>Who are you searching for?</h3>
+              <div className="search-bar">
+                <input
+                  type="text"
+                  placeholder="Enter User's Github username"
+                  value={username}
+                  onChange={handleChange}
+                />
+                <SearchIcon fontSize="large" onClick={fetchUser}/>
+              </div>
             </form>
             <div>
                 {errormsg}
@@ -94,7 +95,7 @@ const GithubApp = () => {
                 {languages.length > 0 && !fetching
                     &&
                     <div>
-                        <div>
+                        <div className="user-info">
                             {
                                 avatarsrc &&
                                 <Avatar src={avatarsrc} />
@@ -112,7 +113,7 @@ const GithubApp = () => {
                                 <p>Following {following}</p>
                             }
                         </div>
-                        <MyPieChart languages={languages} userfullname={username} />
+                        <MyPieChart languages={languages} userfullname={username} id="chart" />
                     </div>
                 }
             </div>
