@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*/////*/
+/*fonts*/
+/*/////*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Oxygen&display=swap');
+
+/*////////////*/
+/* Mobile  */
+/*///////////*/
+
+/*//////*/
+/* HEADER */
+/*//////*/
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: 	#340a58;
+  color: white;
+  font-family: 'Heebo', sans-serif;
+  width: 100%;
+}
+
+header h2 {
+  font-size: 42px;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  width: 100%;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  background: rgba(0,255,0,.6);
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+header li {
+  list-style: none;
+  margin-top: .2em;
+}
+
+
+/*//////*/
+/* MAIN */
+/*//////*/
+body {
+  background: #7247a1;
+  color: white;
+  font-family: 'Oxygen', sans-serif;
+}
+
+main {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*//////*/
+/* HOME*/
+/*//////*/
+#home-img {
+  height: 300px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border: 5px solid rgba(0,255,0,.6);
+}
+
+/*//////*/
+/* Babel*/
+/*//////*/
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form h3 {
+  font-size: 28px;
+  margin-bottom: .5em;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text] {
+  height: 30px;
+  width: 250px;
+  background: whitesmoke;
+  font-size: 16px;
+}
+
+.user-info {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 18px;
+}
+
+#chart {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*//////*/
+/* About*/
+/*//////*/
+.about {
+  width: 80%;
+  font-size: 16px;
+}
+
+.about h2 {
+  margin-bottom: 1em;
+}
+
+.about p {
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+.about a {
+  color: #0cd4bb;
+}
+
+.about img {
+  height: 300px;
+}
+
+/*//////*/
+/* Footer */
+/*//////*/
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer a {
+  color: #0cd4bb;
+}
+
+footer span {
+  margin-left: 1em;
+}
+
+/*////////////*/
+/* DESKTOP  */
+/*///////////*/
+@media only screen and (min-width: 768px) {
+
+  #home-img {
+    height: 400px;
+    margin: 3em;
+  }
+
+  .about img {
+    height: 400px;
+  }
+
+  .about h2 {
+    margin-bottom: .5em;
+  }
+
+  .about {
+    font-size: 18px;
+  }
+
+}

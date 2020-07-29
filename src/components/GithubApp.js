@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './GithubApp.scss';
 import MyPieChart from './MyPieChart';
-import Button from '@material-ui/core/Button';
 import Avatar from './Avatar';
+import SearchIcon from '@material-ui/icons/Search';
 
 const GithubApp = () => {
     const [username, setUsername] = useState("");
@@ -28,11 +27,12 @@ const GithubApp = () => {
         setUsername(event.target.value);
     }
 
-    const fetchUser = async () => {
+    const fetchUser = async (event) => {
+        event.preventDefault();
         setFetching(true);
         const resp = await fetch(`https://api.github.com/users/${username}`, requestOptions);
         const user = await resp.json();
-        if(user) { 
+        if(user) {
             setUserfullname(user.name);
             setAvatarsrc(user.avatar_url);
             setFollowers(user.followers);
@@ -65,7 +65,7 @@ const GithubApp = () => {
             l.push(["Languages", "Count"]);
             languageMap.forEach((value, key) => {
                 l.push([key, value]);
-                
+
             });
             setLanguages(languages => l);
         } else {
@@ -76,21 +76,18 @@ const GithubApp = () => {
 
     return (
         <div className="container">
-            <h3>What language does User code in?</h3>
-            <p>(based on user's contributions to public Github repositories)</p>
-            <input 
-                type="text"
-                placeholder="Enter User's Github username"
-                value={username}
-                onChange={handleChange}
-            />
-            <Button
-                variant="contained"
-                color="primary"
-                onClick={fetchUser}
-            >
-                Fetch
-            </Button>
+            <form onSubmit={fetchUser}>
+              <h3>Who are you searching for?</h3>
+              <div className="search-bar">
+                <input
+                  type="text"
+                  placeholder="Enter User's Github username"
+                  value={username}
+                  onChange={handleChange}
+                />
+                <SearchIcon fontSize="large" onClick={fetchUser}/>
+              </div>
+            </form>
             <div>
                 {errormsg}
             </div>
@@ -98,7 +95,7 @@ const GithubApp = () => {
                 {languages.length > 0 && !fetching
                     &&
                     <div>
-                        <div>
+                        <div className="user-info">
                             {
                                 avatarsrc &&
                                 <Avatar src={avatarsrc} />
@@ -116,11 +113,11 @@ const GithubApp = () => {
                                 <p>Following {following}</p>
                             }
                         </div>
-                        <MyPieChart languages={languages} userfullname={userfullname} />
-                    </div>    
+                        <MyPieChart languages={languages} userfullname={username} id="chart" />
+                    </div>
                 }
             </div>
-            
+
         </div>
     )
 };
