@@ -179,14 +179,20 @@ footer span {
 
   .about img {
     height: 400px;
+    margin-bottom: .5em;
   }
 
   .about h2 {
-    margin-bottom: .5em;
+    margin-top: -.5em;
   }
 
   .about {
     font-size: 18px;
   }
+
+  .about p {
+    margin-top: -.3em;
+  }
+
 
 }
