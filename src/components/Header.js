@@ -5,7 +5,7 @@ const Header = () => {
 
   return(
     <header>
-      <h2>Power of Babel</h2>
+      <h2>The Power of Babel</h2>
       <nav>
         <ul>
           <li>
@@ -23,7 +23,6 @@ const Header = () => {
             <p>About</p>
             </Link>
           </li>
-          <li></li>
         </ul>
       </nav>
     </header>

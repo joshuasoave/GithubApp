@@ -75,16 +75,16 @@ const GithubApp = () => {
 
     return (
         <div className="container">
-
-            <h3>What language does User code in?</h3>
-            <p>(based on user's contributions to public Github repositories)</p>
             <form onSubmit={fetchUser}>
+              <h3>What language does User code in?</h3>
+              <p>(based on user's contributions to public Github repositories)</p>
               <input
                 type="text"
                 placeholder="Enter User's Github username"
                 value={username}
                 onChange={handleChange}
               />
+              <br/>
               <input type="submit" value="Search"/>
             </form>
             <div>

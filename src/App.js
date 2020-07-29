@@ -3,6 +3,7 @@ import './main.css';
 import GithubApp from './components/GithubApp';
 import About from './components/About';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './components/Home';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -11,12 +12,15 @@ function App() {
     <Router>
       <div className="App">
         <Header/>
-        <Route path="/"
-        exact component={Home}/>
-        <Route path="/about"
-        component={About}/>
-        <Route path="/app"
-        component={GithubApp}/>
+        <main>
+          <Route path="/"
+          exact component={Home}/>
+          <Route path="/about"
+          component={About}/>
+          <Route path="/app"
+          component={GithubApp}/>
+        </main>
+        <Footer/>
       </div>
     </Router>
   );

@@ -10,8 +10,8 @@ const MyPieChart = ({languages, userfullname}) => {
         <div>
 
             <Chart
-                width={'600px'}
-                height={'400px'}
+                width={'500px'}
+                height={'300px'}
                 chartType="PieChart"
                 loader={<div>Loading Chart</div>}
                 data={languages}

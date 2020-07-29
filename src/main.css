@@ -1,25 +1,112 @@
 * {
-  border: 1px solid gold;
   margin: 0;
   padding: 0;
 }
 
-/* MOBILE STYLE */
+/*/////*/
+/*fonts*/
+/*/////*/
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Oxygen&display=swap');
+
+/*////////////*/
+/* Mobile  */
+/*///////////*/
 
 /*//////*/
 /* HEADER */
 /*//////*/
-.header {
+header {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: 	#340a58;
+  color: white;
+  font-family: 'Heebo', sans-serif;
 }
 
+header h2 {
+  font-size: 36px;
+  margin-top: 1em;
+  margin-bottom: .5em;
+
+  width: 100%;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  background: rgba(0,255,0,.6);
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+header li {
+  list-style: none;
+}
 
 
 /*//////*/
 /* MAIN */
 /*//////*/
 body {
-  background: #340a58;
-  color: 	#b4fb6d;
+  background: #7247a1;
+  color: white;
+  font-family: 'Oxygen', sans-serif;
+}
+
+main {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*//////*/
+/* HOME*/
+/*//////*/
+#home-img {
+  height: 300px;
+  margin: 3em;
+  border: 5px solid rgba(0,255,0,.6);
+}
+
+/*//////*/
+/* Footer */
+/*//////*/
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer a {
+  color: #0cd4bb;
+}
+
+/*////////////*/
+/* DESKTOP  */
+/*///////////*/
+@media only screen and (min-width: 768px) {
+
+  #home-img {
+    height: 400px;
+    margin: 3em;
+  }
+
 }
