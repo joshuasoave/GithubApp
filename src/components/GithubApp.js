@@ -28,11 +28,12 @@ const GithubApp = () => {
         setUsername(event.target.value);
     }
 
-    const fetchUser = async () => {
+    const fetchUser = async (event) => {
+        event.preventDefault();
         setFetching(true);
         const resp = await fetch(`https://api.github.com/users/${username}`, requestOptions);
         const user = await resp.json();
-        if(user) { 
+        if(user) {
             setUserfullname(user.name);
             setAvatarsrc(user.avatar_url);
             setFollowers(user.followers);
@@ -65,7 +66,7 @@ const GithubApp = () => {
             l.push(["Languages", "Count"]);
             languageMap.forEach((value, key) => {
                 l.push([key, value]);
-                
+
             });
             setLanguages(languages => l);
         } else {
@@ -78,19 +79,15 @@ const GithubApp = () => {
         <div className="container">
             <h3>What language does User code in?</h3>
             <p>(based on user's contributions to public Github repositories)</p>
-            <input 
+            <form onSubmit={fetchUser}>
+              <input
                 type="text"
                 placeholder="Enter User's Github username"
                 value={username}
                 onChange={handleChange}
-            />
-            <Button
-                variant="contained"
-                color="primary"
-                onClick={fetchUser}
-            >
-                Fetch
-            </Button>
+              />
+              <input type="submit" value="Search"/>
+            </form>
             <div>
                 {errormsg}
             </div>
@@ -117,10 +114,10 @@ const GithubApp = () => {
                             }
                         </div>
                         <MyPieChart languages={languages} userfullname={userfullname} />
-                    </div>    
+                    </div>
                 }
             </div>
-            
+
         </div>
     )
 };
